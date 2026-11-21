@@ -7,5 +7,5 @@
     "rootDir": "."
   },
   "include": ["function.ts"],
-  "exclude": ["test.ts"]
+  "exclude": ["tests"]
 }

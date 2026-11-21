@@ -9,5 +9,5 @@
     "allowImportingTsExtensions": true,
     "noEmit": true
   },
-  "include": ["function.ts", "test.ts"]
+  "include": ["function.ts", "tests/**/*.ts"]
 }
