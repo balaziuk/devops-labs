@@ -1,0 +1,26 @@
+{
+  "name": "devops-labs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/function.js",
+  "scripts": {
+    "test": "node --experimental-strip-types --test",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balaziuk/devops-labs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/balaziuk/devops-labs/issues"
+  },
+  "homepage": "https://github.com/balaziuk/devops-labs#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
