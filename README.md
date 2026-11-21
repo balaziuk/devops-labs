@@ -1,0 +1,1 @@
+[![CI](https://github.com/balaziuk/devops-labs/actions/workflows/ci.yaml/badge.svg)](https://github.com/balaziuk/devops-labs/actions/workflows/ci.yaml)
