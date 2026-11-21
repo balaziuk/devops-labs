@@ -7,7 +7,7 @@ test("adds two positive numbers", () => {
 });
 
 test("adds zero", () => {
-  assert.strictEqual(add(0, 7), 8);
+  assert.strictEqual(add(0, 7), 7);
 });
 
 test("adds negative numbers", () => {
