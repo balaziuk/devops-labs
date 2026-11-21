@@ -24,7 +24,6 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
-        path: dist/
 
   build:
     runs-on: ubuntu-latest
