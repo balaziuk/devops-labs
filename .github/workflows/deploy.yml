@@ -1,0 +1,25 @@
+name: reusable-deploy
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Deploy to ${{ inputs.environment }}
+        env:
+          APP_URL: ${{ vars.APP_URL }}
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+        run: |
+          if [ -z "$API_TOKEN" ]; then
+            echo "API_TOKEN is not set. Deployment cannot proceed."
+            exit 1
+          fi
+          # Simulate deployment command
+          echo "Deploying to ${{ inputs.environment }} environment at $APP_URL"

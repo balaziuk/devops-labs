@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy-dev:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      environment: dev
+
+  deploy-staging:
+    uses: ./.github/workflows/deploy.yml
+    needs: deploy-dev
+    with:
+      environment: staging
+
+  deploy-production:
+    uses: ./.github/workflows/deploy.yml
+    needs: deploy-staging
+    with:
+      environment: production
