@@ -9,17 +9,20 @@ on:
 jobs:
   deploy-dev:
     uses: ./.github/workflows/deploy.yml
+    secrets: inherit
     with:
       environment: dev
 
   deploy-staging:
     uses: ./.github/workflows/deploy.yml
+    secrets: inherit
     needs: deploy-dev
     with:
       environment: staging
 
   deploy-production:
     uses: ./.github/workflows/deploy.yml
+    secrets: inherit
     needs: deploy-staging
     with:
       environment: production
